@@ -13,7 +13,7 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task2.V4
         {
             DataService ds = new DataService();
             Console.Title = "Спринт #5 | Выполнил: Савцов Никита Евгеньевич | ИБКСБ - 24 -1";
-            Console.WriteLine("***** *************************************************************** *******");
+            Console.WriteLine("***** ***************** ********************************************** *******");
             Console.WriteLine("* Спринт #5                                                               *");
             Console.WriteLine("* Тема: Класс File. Запись структурированных данных в текстовый файл      *");
             Console.WriteLine("* Задание #2                                                              *");
