@@ -7,13 +7,13 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task2.V4
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            Console.Title = "Спринт #5| Выполнил: Рубанов Е. О. | ПКТБ-24-1";
+            Console.Title = "Спринт #5| Выполнил: Савцов Никита Евгеньевич | ИБКС-24-04";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #5                                                               *");
             Console.WriteLine("* Тема: Класс File. Запись структурированных данных в текстовый файл.     *");
             Console.WriteLine("* Задание #2                                                              *");
             Console.WriteLine("* Вариант #4                                                              *");
-            Console.WriteLine("* Выполнил: Рубанов Егор Олегович | ПКТБ-24-1                             *");
+            Console.WriteLine("* Выполнил: Савцов Никита Евгеньевич | ИБКС-24-04                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Дан двумерный целочисленный массив 3 на 3 элементов, заполненный        *");
