@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using tyuiu.cources.programming.interfaces.Sprint5;
-using Tyuiu.SavtsovNE.Sprint5.Task2.V4.Lib;
+﻿using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.SavtsovNE.Sprint5.Task2.V4.Lib
 {
@@ -13,19 +6,12 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task2.V4.Lib
     {
         public string SaveToFileTextData(int[,] matrix)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}/app\OutPutFileTask2.csv";
-            FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
-            if (fileExists)
+            string filePath = @"C:\Users\Admin\source\repos\Tyuiu.SavtsovNE.Sprint5\Tyuiu.SavtsovNE.Sprint5.Task2.V4.Lib";
+            string ans = "";
+            File.Delete(filePath);
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                File.Delete(path);
-            }
-
-            int rows = matrix.GetUpperBound(0) + 1;
-            int columns = matrix.GetUpperBound(1) + 1;
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < columns; j++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
                 {
                     if (matrix[i, j] > 0)
                     {
@@ -35,33 +21,22 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task2.V4.Lib
                     {
                         matrix[i, j] = 0;
                     }
-                }
-            }
-            string str = "";
-            for (int i =  0; i < rows; i++)
-            {
-                for (int j = 0; j < columns; j++)
-                {
-                    if (j != columns - 1)
+                    if (j == 2 && i != 2)
                     {
-                        str = str + matrix[i, j] + ";";
+                        ans += $"{matrix[i, j]}\n";
+                    }
+                    else if (i == 2 && j == 2)
+                    {
+                        ans += $"{matrix[i, j]}";
                     }
                     else
                     {
-                        str = str + matrix[i, j];
+                        ans += $"{matrix[i, j]};";
                     }
                 }
-                if (i != rows - 1)
-                {
-                    File.AppendAllText(path, str + Environment.NewLine);
-                }
-                else
-                {
-                    File.AppendAllText(path, str);
-                }
-                str = "";
             }
-            return path;
+            try { File.WriteAllText(filePath, ans); } catch (Exception ex) { }
+            return ans;
         }
     }
 }

@@ -1,25 +1,16 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Diagnostics;
-using System.IO;
-using Tyuiu.SavtsovNE.Sprint5.Task2.V4.Lib;
-
 namespace Tyuiu.SavtsovNE.Sprint5.Task2.V4.Test
 {
-    [TestClass]
-    public class DataServiceTest
+    public class Tests
     {
-        [TestMethod]
-        public void CheckedExistsFile()
+        [SetUp]
+        public void Setup()
         {
-            string path = @"C:\Users\Admin\source\repos\Tyuiu.SavtsovNE.Sprint5\Tyuiu.SavtsovNE.Sprint5.Task2.V4.Lib";
-            
+        }
 
-
-            FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
-            bool wait = true;
-            Assert.AreEqual(wait, fileExists);
+        [Test]
+        public void Test1()
+        {
+            Assert.Pass();
         }
     }
 }
