@@ -38,7 +38,7 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task2.V4.Lib
                 }
             }
             string str = "";
-            for (int i = 0; i < rows; i++)
+            for (int i =  0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
                 {
