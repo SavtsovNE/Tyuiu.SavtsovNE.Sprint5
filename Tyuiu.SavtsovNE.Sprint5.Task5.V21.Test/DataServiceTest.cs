@@ -1,22 +1,22 @@
-using Tyuiu.SavtsovNE.Sprint5.Task2.V4.Lib;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.IO;
+using Tyuiu.SavtsovNE.Sprint5.Task5.V24.Lib;
 
-public class DataService
+namespace Tyuiu.SavtsovNE.Sprint5.Task5.V24.Test
 {
-    public double DoubleFactorial(int number)
+    [TestClass]
+    public class DataServiceTest
     {
-        if (number < 0)
+        [TestMethod]
+        public void CheckedExistsFile()
         {
-            throw new ArgumentException(" Negative numbers are not supported.");
+            string path = @"C:\DataSprint5\InPutDataFileTask5V24.txt";
+
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            bool wait = true;
+            Assert.AreEqual(wait, fileExists);
         }
-
-        if (number == 0 || number == 1)
-        {
-            return 1;
-        }
-
-        return number * DoubleFactorial(number - 2);
-
-
     }
 }
-
