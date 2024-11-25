@@ -13,19 +13,43 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task5.V24.Lib
         public double LoadFromDataFile(string path)
         {
             double res = 0;
-            using (StreamReader reader = new StreamReader(path) )
+
+            try
             {
-                string line;
-                while ((line = reader.ReadLine()) != null)
+                using (StreamReader reader = new StreamReader(path))
                 {
-                    double n = Convert.ToDouble(line);
-                    if (n >= -99 && n <= 99)
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
                     {
-                        res += n;
+                        // Проверяем на null или пустую строку
+                        if (string.IsNullOrWhiteSpace(line))
+                        {
+                            continue; // Пропускаем пустые строки
+                        }
+
+                        // Заменяем точку на запятую для корректного парсинга в некоторых локалях
+                        line = line.Replace('.', ',');
+
+                        if (double.TryParse(line, out double n)) // Используем TryParse
+                        {
+                            if (n >= -99 && n <= 99)
+                            {
+                                res += n;
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Не удалось разобрать строку: {line}");
+                        }
                     }
                 }
             }
-            return Math.Round((res), 3);
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при чтении файла: {ex.Message}");
+            }
+
+            return Math.Round(res, 3);
         }
     }
 }
