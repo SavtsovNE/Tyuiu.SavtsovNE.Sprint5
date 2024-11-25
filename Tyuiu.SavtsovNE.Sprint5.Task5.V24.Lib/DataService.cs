@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 using tyuiu.cources.programming.interfaces.Sprint5;
+using System.IO;
 
 namespace Tyuiu.SavtsovNE.Sprint5.Task5.V24.Lib
 {
@@ -18,13 +18,14 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task5.V24.Lib
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (Convert.ToDouble(line) / 10 >= 1)
+                    double n = Convert.ToDouble(line);
+                    if (n >= -99 && n <= 99)
                     {
-                        res = res + Convert.ToDouble(line);
+                        res += n;
                     }
                 }
             }
-            return res;
+            return Math.Round((res), 3);
         }
     }
 }
