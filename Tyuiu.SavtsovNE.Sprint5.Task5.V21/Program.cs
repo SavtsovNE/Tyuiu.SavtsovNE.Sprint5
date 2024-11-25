@@ -23,7 +23,7 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task5.V21
             Console.WriteLine("* Создать папку в ручную С:\\DataSprint5\\ и скопировать в неё файл) в котором есть набор значений. Найти факториал наибольшего целого.            *");
             Console.WriteLine("*                                         *");
             Console.WriteLine("* числа, которое делится на 2, в файле. Полученный результат вывести на консоль. У вещественных значений округлить до трёх знаков после запятой.        *");
-            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("*********************** ****************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "DataSprint5", "InPutDataFileTask5V21.txt");

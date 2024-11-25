@@ -11,7 +11,7 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task5.V21.Lib
         {
             try
             {
-                var lines = File.ReadAllLines(filePath);
+                var lines = File.ReadAllLines( filePath);
                 return lines.Select(line => double.Parse(line)).ToArray();
             }
             catch (Exception ex)

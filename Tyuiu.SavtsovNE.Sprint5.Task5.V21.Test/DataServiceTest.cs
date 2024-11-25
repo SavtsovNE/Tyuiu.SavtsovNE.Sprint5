@@ -6,7 +6,7 @@ public class DataService
     {
         if (number < 0)
         {
-            throw new ArgumentException("Negative numbers are not supported.");
+            throw new ArgumentException(" Negative numbers are not supported.");
         }
 
         if (number == 0 || number == 1)
