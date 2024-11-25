@@ -10,7 +10,7 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task5.V24.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\DataSprint5\InPutDataFileTask5V24.txt";
+            string path = @"C:\DataSptint5\InPutDataFileTask5V24.txt";
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;

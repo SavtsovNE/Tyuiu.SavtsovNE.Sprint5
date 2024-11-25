@@ -23,7 +23,7 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task5.V24
             Console.WriteLine("* Задание #5                                                                           *");
             Console.WriteLine("* Вариант #24                                                                          *");
             Console.WriteLine("* Выполнил: Савцов Никита Евгеньевич | ИБКСб-24-1                                      *");
-            Console.WriteLine("****************************************************************************************");
+            Console.WriteLine("********************************************* *******************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                             *");
             Console.WriteLine("* Дан файл С:DataSprint5InPutDataFileTask4V0.txt (файл взять из архива                 *");
             Console.WriteLine("* согласно вашему варианту. Создать папку в ручную С:DataSprint5 и скопировать         *");
