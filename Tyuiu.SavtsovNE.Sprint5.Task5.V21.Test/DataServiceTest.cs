@@ -1,3 +1,5 @@
+using Tyuiu.SavtsovNE.Sprint5.Task2.V4.Lib;
+
 public class DataService
 {
     public double DoubleFactorial(int number)
@@ -13,6 +15,8 @@ public class DataService
         }
 
         return number * DoubleFactorial(number - 2);
+
+
     }
 }
 

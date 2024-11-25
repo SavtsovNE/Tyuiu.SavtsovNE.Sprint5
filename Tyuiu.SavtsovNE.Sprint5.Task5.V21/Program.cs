@@ -26,22 +26,17 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task5.V21
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            string filePath = Path.Combine(Path.GetTempPath(), "InPutDataFileTask5V21.txt");
-
-            // Убедитесь, что файл существует
-            if (!File.Exists(filePath))
-            {
-                Console.WriteLine($"Файл не найден: {filePath}");
-                return;
-            }
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "DataSprint5", "InPutDataFileTask5V21.txt");
 
             DataService dataService = new DataService();
-            int? maxEven = dataService.FindMaxEven(filePath);
+            double[] values = dataService.ReadValuesFromFile(filePath);
 
-            if (maxEven.HasValue)
+            int largestEvenNumber = dataService.FindLargestEvenNumber(values);
+
+            if (largestEvenNumber != -1)
             {
-                int factorial = dataService.Factorial(maxEven.Value);
-                Console.WriteLine($"Факториал наибольшего четного числа {maxEven.Value} равен {factorial}");
+                long factorial = dataService.Factorial(largestEvenNumber);
+                Console.WriteLine($"Факториал наибольшего четного числа ({largestEvenNumber}) равен: {factorial}");
             }
             else
             {

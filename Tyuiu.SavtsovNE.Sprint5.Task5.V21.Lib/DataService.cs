@@ -3,27 +3,38 @@ using System.IO;
 using System.Linq;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
-namespace Tyuiu.SavtsovNE.Sprint5.Task5.V21.Lib 
+namespace Tyuiu.SavtsovNE.Sprint5.Task5.V21.Lib
 {
     public class DataService : ISprint5Task5V21
     {
-        public int Factorial(int number)
+        public double[] ReadValuesFromFile(string filePath)
         {
-            if (number < 0) throw new ArgumentException("Number must be non-negative.");
-            return number == 0 ? 1 : number * Factorial(number - 1);
+            try
+            {
+                var lines = File.ReadAllLines(filePath);
+                return lines.Select(line => double.Parse(line)).ToArray();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при чтении файла: {ex.Message}");
+                return Array.Empty<double>();
+            }
         }
 
-        public int? FindMaxEven(string filePath)
+        public int FindLargestEvenNumber(double[] values)
         {
-            var lines = File.ReadAllLines(filePath);
-            var numbers = lines.Select(line =>
-            {
-                if (double.TryParse(line, out double num))
-                    return (int?)num;
-                return null;
-            }).Where(num => num.HasValue && num.Value % 2 == 0).Select(num => num.Value);
+            return values.Where(v => v % 2 == 0).Select(v => (int)v).DefaultIfEmpty(-1).Max();
+        }
 
-            return numbers.Any() ? (int?)numbers.Max() : null;
+        public long Factorial(int number)
+        {
+            if (number < 0) throw new ArgumentOutOfRangeException("number", "Факториал не определен для отрицательных чисел.");
+            long result = 1;
+            for (int i = 2; i <= number; i++)
+            {
+                result *= i;
+            }
+            return result;
         }
 
         public double LoadFromDataFile(string path)
