@@ -13,13 +13,13 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task5.V24
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            Console.Title = "Спринт #5 | Выполнил: Боттер В.В. | ПКТб-23-2";
+            Console.Title = "Спринт #5 | Выполнил: Савцов Никита Евгеньевич | ИБКСб-24-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #5                                                               *");
             Console.WriteLine("* Тема: Чтение набора данных из текстового файла                          *");
             Console.WriteLine("* Задание #5                                                              *");
             Console.WriteLine("* Вариант #24                                                             *");
-            Console.WriteLine("* Выполнил: Боттер Вадим Валерьевич | ПКТб-23-2                           *");
+            Console.WriteLine("* Выполнил: Савцов Никита Евгеньевич | ИБКСб-24-1                          *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Дан файл InPutDataFileTask5V24.txt в котором есть набор значений.       *");
