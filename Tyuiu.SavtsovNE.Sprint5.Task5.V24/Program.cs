@@ -15,14 +15,14 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task5.V24
             DataService ds = new DataService();
 
 
-            Console.Title = "Спринт #5 | Выполнил: Молодых В. Ю. | ИИПБ-23-3";
-            //Длина строки 75 символов
+            Console.Title = "Спринт #5 | Выполнил: Савцов Никита Евгеньевич | ИБКСб-24-1";
+            
             Console.WriteLine("****************************************************************************************");
             Console.WriteLine("* Спринт #5                                                                            *");
             Console.WriteLine("* Тема: Обработка файлов                                                               *");
             Console.WriteLine("* Задание #5                                                                           *");
             Console.WriteLine("* Вариант #24                                                                          *");
-            Console.WriteLine("* Выполнил: Молодых Владислав Юрьевич | ИИПБ-23-3                                      *");
+            Console.WriteLine("* Выполнил: Савцов Никита Евгеньевич | ИБКСб-24-1                                      *");
             Console.WriteLine("****************************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                             *");
             Console.WriteLine("* Дан файл С:DataSprint5InPutDataFileTask4V0.txt (файл взять из архива                 *");
