@@ -6,6 +6,7 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task7.V5.Test
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task7.V5
         private static void Main(string[] args)
         {
             Console.Title = "Спринт #5 | Выполнил: Савцов Никита Евгеньевич | ИБКСб-24-1";
-            Console.WriteLine("**************************************************************************");
+            Console.WriteLine("*************************** ***********************************************");
             Console.WriteLine("* Спритн #5                                                              *");
             Console.WriteLine("* Тема: Создания итогого решения по спринту                              *");
             Console.WriteLine("* Задание #7                                                             *");
