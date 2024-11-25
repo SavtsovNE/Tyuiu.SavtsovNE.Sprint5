@@ -19,7 +19,7 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task5.V24.Lib
                 while ((line = reader.ReadLine()) != null)
                 {
                     double n = Convert.ToDouble(line);
-                    if (n >= -99 && n <= 99 )
+                    if (n >= -99 && n <= 99)
                     {
                         res += n;
                     }
