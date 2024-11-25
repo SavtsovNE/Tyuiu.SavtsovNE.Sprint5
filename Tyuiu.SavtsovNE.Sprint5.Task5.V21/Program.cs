@@ -14,7 +14,7 @@ namespace Tyuiu.SavtsovNE.Sprint5.Task5.V24
         {
             DataService ds = new DataService();
             Console.Title = "Спринт #5 | Выполнил: Савцов Никита Евгеньевич | ИБКСб-24-1";
-            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("********** *****************************************************************");
             Console.WriteLine("* Спринт #5                                                               *");
             Console.WriteLine("* Тема: Чтение набора данных из текстового файла                          *");
             Console.WriteLine("* Задание #5                                                              *");
